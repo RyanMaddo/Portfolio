@@ -1,3 +1,7 @@
+body
+{
+  margin: 0;
+}
 .header
 {
 }
@@ -14,6 +18,7 @@ nav
   position: fixed;
   overflow: hidden;
   top: 0;
+  left: 0;
 }
 nav a
 {
@@ -28,23 +33,56 @@ nav a
 {
   width:100%;
   height: auto;
-  border: 2px solid black;
 }
 .container
 {
-  max-width: 800px;
+  max-width: 1000px;
   height: 100%;
   margin: auto;
   border: 1px solid red;
 }
-#home
+.homecontent
 {
-  height: 800px;
+  padding-top: 100px;
+  display: flex;
+  height: 550px;
   border-bottom: 5px solid  #fcc006;
+}
+.hometext
+{
+  margin-left: 50px;
+  width:500px;
+  height: 600px;
+  text-align: center;
+}
+.hometext p
+{
+  font-size: 20pt;
+  color: grey;
+}
+.hometext button
+{
+  background-color:grey;
+  color: white;
+}
+.homeimage
+{
+  margin-top: 100px;
+  border: 1px solid black;
+  width: 400px;
+  height: 400px;
+  background-color: grey;
+}
+.homeimage img
+{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
 }
 #me
 {
-  border: 1px solid black;
   width: 100%;
   height: 400px;
 }
@@ -57,17 +95,14 @@ p
 #about
 {
   height: 590px;
-  border-bottom: 5px solid  #fcc006;
 }
 #work
 {
   height: 590px;
-  border-bottom: 5px solid  #fcc006;
 }
 #contact
 {
   height: 590px;
-  border-bottom: 5px solid  #fcc006;
 }
 h1
 {
@@ -76,7 +111,7 @@ h1
 }
 footer
 {
-  background-color: black;
-  height: 150px;
+  border: 5px solid #fcc006;
+  height: 80px;
   width: 100%;
 }
