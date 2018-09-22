@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <head>
   <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ryan Maddock Portfolio</title>
 </head>
@@ -9,19 +12,64 @@
   <div class="header">
     <nav>
       <div class="logo">
-        <a href="index.html">LOGO</a>
+        <a href="index.html"><img src="files/logo.png"></a>
       </div>
       <div class="links">
         <a href="about.html">About</a>
-        <a href="work.html">Work</a>
+        <a href="work.html"><u style="color:#fcc006;">Work</u></a>
         <a href="#">Contact</a>
       </div>
     </nav>
   </div>
-  <div class="content">
+  <div class="workcontent">
     <div class="container">
+      <h1>MY WORK</h1>
+      <div class="circles">
+        <svg height="100" width="60">
+            <circle id="leftcircle" cx="30" cy="30" r="20" stroke="#fcc006" stroke-width="3" fill="none">
+          </circle>
+        </svg>
+        <svg height="100" width="60">
+          <circle id="centercircle" cx="30" cy="30" r="20" stroke="#fcc006" stroke-width="3" fill="#c1272d" />
+        </svg>
+        <svg height="100" width="60">
+          <circle id="rightcircle" cx="30" cy="30" r="20" stroke="#fcc006" stroke-width="3" fill="none" />
+        </svg>
+      </div>
+    <div class="sliderwrapper">
+      <div class="grooupemail">
+        <div class="infoleft">
+          <h2>Grooup HTML Email</h2>
+          <p>Type: University Project</p>
+          <p>As Part of my professional portfolio module at university I was given a task to create a HTML email for the company Grooup.</p>
+        </div>
+      <div class="inforight">
+        <img src="files/grooup.png">
+      </div>
+    </div>
+  <div class="sdachurch">
+    <div class="infoleft">
+      <h2>Southport Seventh-Day Adventist Website creation</h2>
+      <p>Type: FreeLance</p>
+      <p>SDA church Website creation</p>
+    </div>
+  <div class="inforight">
+    <img src="files/grooup.png">
+  </div>
+    </div>
+    <div class="thiswebsite">
+      <div class="infoleft">
+        <h2>This Portfolio Site</h2>
+        <p>Type: Personal</p>
+        <p>Creating this website!</p>
+      </div>
+    <div class="inforight">
+      <img src="files/grooup.png">
+    </div>
+  </div>
+</div>
 
-  <h1 style="padding-top:30px;">MY WORK</h1>
+  <a><button style="margin-top:20px;">View Project</button></a>
 </div>
 </div>
 <footer>
@@ -36,5 +84,52 @@
     <a href="mailto:ryanmaddock16@hotmail.co.uk"><i class="fas fa-envelope"></i></a>
   </div>
 </footer>
+<script>
+  window.onload = function() {
+    $('.sdachurch').hide();
+    $('.thiswebsite').hide();
+  }
+
+    $('.grooupemail').on('swipeleft', grooupSwipeLeft);
+    $('.grooupemail').on('swiperight', grooupSwipeRight);
+    $('.sdachurch').on('swipeleft', sdaSwipeLeft);
+    $('.sdachurch').on('swiperight', sdaSwipeRight);
+    $('.thiswebsite').on('swipeleft', thisWebsiteSwipeLeft);
+    $('.thiswebsite').on('swiperight', thisWebsiteSwipeRight);
+
+    function grooupSwipeLeft()
+    {
+      $(this).hide();
+      $('.sdachurch').show();
+      document.getElementById("leftcircle").setAttribute("fill", "#c1272d");
+      document.getElementById("centercircle").setAttribute("fill", "none");
+      document.getElementById("rightcircle").setAttribute("fill", "none");
+    }
+    function grooupSwipeRight()
+    {
+      $(this).hide();
+      $('.thiswebsite').show();
+    }
+    function sdaSwipeLeft()
+    {
+      $(this).hide();
+      $('.thiswebsite').show();
+    }
+    function sdaSwipeRight()
+    {
+      $(this).hide();
+      $('.grooupemail').show();
+    }
+    function thisWebsiteSwipeLeft()
+    {
+      $(this).hide();
+      $('.grooupemail').show();
+    }
+    function theWebsiteSwipeRight()
+    {
+      $(this).hide();
+      $('.sdachurch').show();
+    }
+</script>
 </body>
 </html>
