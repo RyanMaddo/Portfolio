@@ -1,3 +1,6 @@
+.ui-loader{
+    display: none;
+}
 body
 {
   margin: 0;
@@ -138,6 +141,7 @@ margin: 20px;
   height:auto;
   display:flex;
   border: 1px solid #fcc006;
+  border-radius: 25px;
 }
 .grooupemail p
 {

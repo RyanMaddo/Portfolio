@@ -2,7 +2,8 @@
 <head>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+  <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />-->
+
   <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,6 +47,9 @@
       <div class="inforight">
         <img src="files/grooup.png">
       </div>
+      <div class="grooupemailproject">
+        THIS IS THE GROOUP EMAIL PROJECT
+      </div>
     </div>
   <div class="sdachurch">
     <div class="infoleft">
@@ -66,10 +70,12 @@
     <div class="inforight">
       <img src="files/grooup.png">
     </div>
+    <div class="thiswebsiteproject">
+      THIS Website
+    </div>
   </div>
 </div>
-
-  <a><button style="margin-top:20px;">View Project</button></a>
+  <button class="projectinfo" style="margin-top:20px; margin-bottom:20px;">View Project</button>
 </div>
 </div>
 <footer>
@@ -84,12 +90,15 @@
     <a href="mailto:ryanmaddock16@hotmail.co.uk"><i class="fas fa-envelope"></i></a>
   </div>
 </footer>
+</body>
 <script>
+  $( document ).ready()
   window.onload = function() {
     $('.sdachurch').hide();
     $('.thiswebsite').hide();
+    $('.grooupemailproject').hide();
+    $('.thiswebsiteproject').hide();
   }
-
     $('.grooupemail').on('swipeleft', grooupSwipeLeft);
     $('.grooupemail').on('swiperight', grooupSwipeRight);
     $('.sdachurch').on('swipeleft', sdaSwipeLeft);
@@ -125,11 +134,26 @@
       $(this).hide();
       $('.grooupemail').show();
     }
-    function theWebsiteSwipeRight()
+    function thisWebsiteSwipeRight()
     {
       $(this).hide();
       $('.sdachurch').show();
     }
+
+    if ($('.grooupemail').not(':hidden'))
+    {
+      $('.projectinfo').on("click", function()
+      {
+        $('.grooupemailproject').show();
+      });
+    }
+    if ($('.thiswebsite').not(':hidden'))
+    {
+      $('.projectinfo').on("click", function()
+      {
+        $('.thiswebsiteproject').show();
+      });
+    }
+
 </script>
-</body>
 </html>
