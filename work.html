@@ -8,6 +8,15 @@
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ryan Maddock Portfolio</title>
+  <style>
+    @media only screen and (max-width:600px)
+    {
+
+    }
+
+
+
+  </style>
 </head>
 <body>
   <div class="header">
@@ -47,9 +56,9 @@
       <div class="inforight">
         <img src="files/grooup.png">
       </div>
-      <div class="grooupemailproject">
-        THIS IS THE GROOUP EMAIL PROJECT
-      </div>
+    </div>
+    <div class="grooupemailproject">
+      THIS IS THE GROOUP EMAIL PROJECT
     </div>
   <div class="sdachurch">
     <div class="infoleft">
@@ -145,8 +154,22 @@
       $('.projectinfo').on("click", function()
       {
         $('.grooupemailproject').show();
+        if ($('.grooupemailproject').not(':hidden'))
+        {
+          $('.projectinfo').on("click", function()
+        {
+          $('.grooupemailproject').hide();
+        });
+        }
       });
     }
+
+
+
+
+
+
+
     if ($('.thiswebsite').not(':hidden'))
     {
       $('.projectinfo').on("click", function()
