@@ -52,6 +52,13 @@ nav a
 {
 margin: 20px;
 }
+.links .icon {
+  display: none;
+}
+.linksmobile
+{
+  display: none;
+}
 .content
 {
   margin-top:160px;
@@ -153,7 +160,7 @@ margin: 20px;
   margin-top: 25px;
   width:100%;
   height:auto;
-  display:flex;
+  text-align: center;
   border: 1px solid #fcc006;
   border-radius: 25px;
 }

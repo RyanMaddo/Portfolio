@@ -3,10 +3,17 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
   <title>Ryan Maddock Portfolio</title>
   <style>
     @media only screen and (max-width:600px)
     {
+      .body
+      {
+        margin: 0;
+        padding:0;
+      }
       .header
       {
       width:100%;
@@ -25,10 +32,11 @@
       nav
       {
         width:100%;
-        position: static;
+
       }
       .homecontent
       {
+        width: 100%;
         flex-direction: column-reverse;
         justify-content: flex-start;
         align-items: flex-start;
@@ -45,25 +53,73 @@
       }
       footer
       {
-        width:96%;
+        width:97%;
         position: static;
         bottom: 0;
       }
 
-    }
+      #test
+      {
+        height:1000px;
+      }
+      .test2
+      {
+        display: flex;
+        width: 100%;
+      }
+      .logo
+      {
+        flex-grow: 3;
+        justify-content: center;
+      }
+      .links
+      {
+        flex-grow: 4;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .links a:not(:first-child)
+       {
+         display: none;
+       }
+       .links a.icon
+       {
+         display: block;
+         font-size: 50pt;
+         padding-right: 50px;
 
+       }
+       .links.responsive
+       {
+         position: relative;
+         height: 1000px;
+       }
+
+       .links.responsive a
+       {
+         float: none;
+         display: block;
+         text-align: left;
+       }
+}
   </style>
 </head>
 <body>
   <div class="header">
     <nav>
       <div class="logo">
-        <a href="index.html"><img src="files/logo.png"</a>
+        <a class="logoimg" href="index.html"><img src="files/logo.png"</a>
       </div>
-      <div class="links">
+      <div class="links" id="mobileNav">
         <a href="about.html">About</a>
         <a href="work.html">Work</a>
         <a href="#">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="openNav(), changeStyles()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="linksmobile">
+        <a onClick="history.go(0)" style="height: 100px; font-size: 60px; text-shadow: 2px 2px #fcc006; color:white;">&#10006;</a>
       </div>
     </nav>
   </div>
@@ -77,7 +133,7 @@
           <a href="work.html"><button>View work</button></a>
         </div>
       <div class="homeimage">
-        <img src="">
+        <img src="files/me.png">
       </div>
       </div>
     </div>
@@ -95,4 +151,26 @@
     </div>
   </footer>
 </body>
+<script>
+
+
+function openNav() {
+    var x = document.getElementById("mobileNav");
+    if (x.className === "links") {
+        x.className += " responsive";
+
+    } else {
+        x.className = "links";
+    }
+}
+function changeStyles() {
+  $('i').hide();
+  $( "nav" ).height( '100%' ).css("flex-direction", "column");
+  $('.logo').width( '100%' ).css({"align-items": "flex-start", "justify-content": "center", "padding-top": "50px"});
+  $('.links').css({"flex-direction": "column", "justify-content": "center" });
+  $('.linksmobile').css({"display": "flex", "justify-content":"center", "align": "center", "padding-bottom": "50px"});
+}
+
+
+</script>
 </html>

@@ -3,15 +3,53 @@
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
   <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />-->
-
-  <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+  <!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ryan Maddock Portfolio</title>
   <style>
     @media only screen and (max-width:600px)
     {
+      nav
+      {
+        width:100%;
 
+      }
+      .logo
+      {
+        flex-grow: 3;
+        justify-content: center;
+      }
+      .links
+      {
+        flex-grow: 4;
+        justify-content: flex-end;
+        align-items: center;
+      }
+      .links a:not(:first-child)
+       {
+         display: none;
+       }
+       .links a.icon
+       {
+         display: block;
+         font-size: 50pt;
+         padding-right: 50px;
+
+       }
+       .links.responsive
+       {
+         position: relative;
+         height: 1000px;
+       }
+
+       .links.responsive a
+       {
+         float: none;
+         display: block;
+         text-align: left;
+       }
     }
 
 
@@ -22,12 +60,18 @@
   <div class="header">
     <nav>
       <div class="logo">
-        <a href="index.html"><img src="files/logo.png"></a>
+        <a class="logoimg" href="index.html"><img src="files/logo.png"</a>
       </div>
-      <div class="links">
+      <div class="links" id="mobileNav">
         <a href="about.html">About</a>
-        <a href="work.html"><u style="color:#fcc006;">Work</u></a>
+        <a href="work.html">Work</a>
         <a href="#">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="openNav(), changeStyles()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
+      <div class="linksmobile">
+        <a onClick="history.go(0)" style="height: 100px; font-size: 60px; text-shadow: 2px 2px #fcc006; color:white;">&#10006;</a>
       </div>
     </nav>
   </div>
@@ -58,7 +102,36 @@
       </div>
     </div>
     <div class="grooupemailproject">
-      THIS IS THE GROOUP EMAIL PROJECT
+      <h1>Grooup Html Email</h1>
+    <p>This Project was undertaken as part of the Professional Portfolio Module at Edge Hill University</p>
+  <h2>Planning</h2>
+  <p>At the start of this project I firstly looked at what current HTML Emails look like, to do this I used a website called <a href="https://reallygoodemails.com/">ReallyGoodEmails</a>, I also looked within my own Email Mailbox to see
+    how the companies that I am interested in format their emails.</p>
+    <p> From this I found that emails tend to follow the design of Logo at the top and images and text followed below, this can be seen by the example below</p>
+    <div id="email-layout-scroll">
+    <img src="images/grooup email/email-layout.png" style="margin-right">
+    </div>
+    <p>Once having an idea of what current HTML Emails look like I came up with some low fidelity prototypes</p>
+    <img src="images/grooup email/lowfidelity.jpg" style="width: 600px; height: 600px; transform: rotate(90deg);">
+      <p>From the prototypes listed above I chose this design asI felt that this style is very similar to the Grooup website. Once chosen I then created the following high fidelity prototype to visualise what
+        the email would actually look like with the appropiate content added.</p>
+      <p>After creating the high fidelity prototype I then had to start to think how to code html emails and as I had never created an HTML email before, I did some research and found that html tables are
+      the best way to get the layout of HTML Emails to work within outlook, so it was important that I used tables as the main aim of the project was to get the email to work on all email clients.</p>
+
+      <h1>Finished Product</h1>
+      <p>The finished project can be viewed below or by clicking this link <a href="grooup-email.html">View Email</a>
+
+          <object id="finished-email-scrollable" type="text/html" data="grooup-email.html" style="margin-left: 25%; width:600px;">
+          </object>
+
+          <h1>Testing</h1>
+          <p>After the email was finished it was tested using <a href="https://www.emailonacid.com/">EmailOnAcid</a> this
+            shown whether the email would work on mutliple clients, the results shown that the email would work all 88 clients tested.
+            The clients included the mail apps on both ios and android and gmail etc.</p>
+            <h2>Test example on Iphone 6 Gmail</h2>
+            <img src="images/grooup email/images/iphone6test.png">
+            <h2>Other test examples</h2>
+            <img src="images/grooup email/images/emailtest.png">
     </div>
   <div class="sdachurch">
     <div class="infoleft">
@@ -101,7 +174,23 @@
 </footer>
 </body>
 <script>
-  $( document ).ready()
+  function openNav() {
+      var x = document.getElementById("mobileNav");
+      if (x.className === "links") {
+          x.className += " responsive";
+
+      } else {
+          x.className = "links";
+      }
+  }
+  function changeStyles() {
+    $('i').hide();
+    $( "nav" ).height( '100%' ).css("flex-direction", "column");
+    $('.logo').width( '100%' ).css({"align-items": "flex-start", "justify-content": "center", "padding-top": "50px"});
+    $('.links').css({"flex-direction": "column", "justify-content": "center" });
+    $('.linksmobile').css({"display": "flex", "justify-content":"center", "align": "center", "padding-bottom": "50px"});
+  }
+    $( document ).ready()
   window.onload = function() {
     $('.sdachurch').hide();
     $('.thiswebsite').hide();
