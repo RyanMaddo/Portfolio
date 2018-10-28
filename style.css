@@ -231,6 +231,43 @@ margin: 20px;
 {
   color:white;
 }
+.navigationbuttons
+{
+  width:100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.nextproject
+{
+  margin-right: 50px;
+  height:70px;
+  width:250px;
+  background-color: #c1272d;
+  border: 2px solid #fcc006;
+  text-decoration: none;
+  color:white;
+}
+.nextproject h1
+{
+  align-items: center;
+  font-size: 16pt;
+}
+.back
+{
+  height:70px;
+  width:250px;
+  background-color: #c1272d;
+  border: 2px solid #fcc006;
+  text-decoration: none;
+  color:white;
+}
+.back h1
+{
+  align-items: center;
+  font-size: 16pt;
+}
 
 h1
 {
