@@ -2,8 +2,6 @@
 <head>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-  <!--<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />-->
-  <!--<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>-->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -50,7 +48,33 @@
          display: block;
          text-align: left;
        }
-    }
+       .mobileWrapper
+       {
+        flex-direction: column;
+       }
+       .grooupemail
+       {
+        
+       }
+       .infoleft 
+       {
+        width: 100%;
+       }
+       .infoleft p
+       {
+        font-size: 12pt;
+       }
+       .leftbutton
+       {
+        width:150px;   
+        font-size: 35px;    
+      }
+      .rightbutton
+      {
+        width: 150px;
+        font-size: 35px;
+      }
+      }
 
 
 
@@ -92,6 +116,10 @@
       </div>
     <div class="sliderwrapper">
       <div class="grooupemail">
+        <div class="leftbutton" onclick="grooupLeftButton()">
+          <i class="fas fa-angle-left"></i>
+        </div>
+        <div class="mobileWrapper" style="display: flex;">
         <div class="infoleft">
           <h2>Grooup HTML Email</h2>
           <p>Type: University Project</p>
@@ -100,6 +128,10 @@
       <div class="inforight">
         <img src="files/grooup.png">
       </div>
+    </div>
+       <div class="rightbutton" onclick="grooupRightButton()">
+      <i class="fas fa-angle-right"></i>
+    </div>
     </div>
     <div class="grooupemailproject">
       <h1>Grooup Html Email</h1>
@@ -134,6 +166,9 @@
             <img src="images/grooup email/images/emailtest.png">
     </div>
   <div class="sdachurch">
+     <div class="leftbutton" onclick="sdaLeftButton()">
+          <i class="fas fa-angle-left"></i>
+        </div>
     <div class="infoleft">
       <h2>Southport Seventh-Day Adventist Website creation</h2>
       <p>Type: FreeLance</p>
@@ -142,8 +177,14 @@
   <div class="inforight">
     <img src="files/grooup.png">
   </div>
+   <div class="rightbutton" onclick="sdaRightButton()" >
+      <i class="fas fa-angle-right"></i>
+    </div>
     </div>
     <div class="thiswebsite">
+       <div class="leftbutton" onclick="thisWebsiteLeftButton()">
+          <i class="fas fa-angle-left"></i>
+        </div>
       <div class="infoleft">
         <h2>This Portfolio Site</h2>
         <p>Type: Personal</p>
@@ -151,6 +192,9 @@
       </div>
     <div class="inforight">
       <img src="files/grooup.png">
+    </div>
+       <div class="rightbutton" onclick="thisWebsiteRightButton()">
+      <i class="fas fa-angle-right"></i>
     </div>
     <div class="thiswebsiteproject">
       THIS Website
@@ -197,46 +241,58 @@
     $('.grooupemailproject').hide();
     $('.thiswebsiteproject').hide();
   }
-    $('.grooupemail').on('swipeleft', grooupSwipeLeft);
-    $('.grooupemail').on('swiperight', grooupSwipeRight);
-    $('.sdachurch').on('swipeleft', sdaSwipeLeft);
-    $('.sdachurch').on('swiperight', sdaSwipeRight);
-    $('.thiswebsite').on('swipeleft', thisWebsiteSwipeLeft);
-    $('.thiswebsite').on('swiperight', thisWebsiteSwipeRight);
-
-    function grooupSwipeLeft()
+    function grooupLeftButton()
     {
-      $(this).hide();
+      $('.grooupemail').hide();
       $('.sdachurch').show();
       document.getElementById("leftcircle").setAttribute("fill", "#c1272d");
       document.getElementById("centercircle").setAttribute("fill", "none");
       document.getElementById("rightcircle").setAttribute("fill", "none");
     }
-    function grooupSwipeRight()
+    function grooupRightButton()
     {
-      $(this).hide();
+      $('.grooupemail').hide();
       $('.thiswebsite').show();
+       document.getElementById("leftcircle").setAttribute("fill", "none");
+      document.getElementById("centercircle").setAttribute("fill", "none");
+      document.getElementById("rightcircle").setAttribute("fill", "#c1272d");
     }
-    function sdaSwipeLeft()
+    function sdaLeftButton()
     {
-      $(this).hide();
+      $('.sdachurch').hide();
       $('.thiswebsite').show();
+      document.getElementById("leftcircle").setAttribute("fill", "none");
+      document.getElementById("centercircle").setAttribute("fill", "none");
+      document.getElementById("rightcircle").setAttribute("fill", "#c1272d");
     }
-    function sdaSwipeRight()
+    function sdaRightButton()
     {
-      $(this).hide();
+      $('.sdachurch').hide();
       $('.grooupemail').show();
+      document.getElementById("leftcircle").setAttribute("fill", "none");
+      document.getElementById("centercircle").setAttribute("fill", "#c1272d");
+      document.getElementById("rightcircle").setAttribute("fill", "none");
     }
-    function thisWebsiteSwipeLeft()
+    function thisWebsiteLeftButton()
     {
-      $(this).hide();
+      $('.thiswebsite').hide();
       $('.grooupemail').show();
+      document.getElementById("leftcircle").setAttribute("fill", "none");
+      document.getElementById("centercircle").setAttribute("fill", "#c1272d");
+      document.getElementById("rightcircle").setAttribute("fill", "none");
     }
-    function thisWebsiteSwipeRight()
+    function thisWebsiteRightButton()
     {
-      $(this).hide();
+      $('.thiswebsite').hide();
       $('.sdachurch').show();
+      document.getElementById("leftcircle").setAttribute("fill", "#c1272d");
+      document.getElementById("centercircle").setAttribute("fill", "none");
+      document.getElementById("rightcircle").setAttribute("fill", "none");
     }
+
+
+
+
 
     if ($('.grooupemail').not(':hidden'))
     {

@@ -32,40 +32,38 @@
       nav
       {
         width:100%;
+        position: static;
 
-      }
-      .homecontent
-      {
-        width: 100%;
-        flex-direction: column-reverse;
-        justify-content: flex-start;
-        align-items: flex-start;
       }
       .hometext
       {
       width:98%;
       }
+      .hometext button
+      {
+        margin-bottom: 50px;
+      }
       .homeimage
       {
-        margin-top: 30px;
+        margin-top: 50px;
+        margin-bottom: 20px;
         height:300px;
         width:100%;
+      }
+      .homecontainer
+      {
+        flex-direction: column;
+      }
+      .homecontent
+      {
+        margin-top: 0px;
+        height:auto;
       }
       footer
       {
         width:97%;
         position: static;
         bottom: 0;
-      }
-
-      #test
-      {
-        height:1000px;
-      }
-      .test2
-      {
-        display: flex;
-        width: 100%;
       }
       .logo
       {
@@ -123,20 +121,21 @@
       </div>
     </nav>
   </div>
-  <div class="content">
+  <div class="homecontent">
     <div class="container">
-      <div class="homecontent">
-        <div class="hometext">
-          <h1>Hello!</h1>
-          <p>I'm a graduate in web design and development.</p>
-          <p>Looking at becoming a front end developer.</p>
-          <a href="work.html"><button>View work</button></a>
-        </div>
+      <div class="homecontainer">
+
       <div class="homeimage">
         <img src="files/me.png">
       </div>
+      <div class="hometext">
+        <h1>Hello!</h1>
+        <p>I'm a graduate in web design and development.</p>
+        <p>Looking at becoming a front end developer.</p>
+        <a href="work.html"><button>View work</button></a>
       </div>
     </div>
+      </div>
   </div>
   <footer>
     <div class="ftrleft">
@@ -165,7 +164,7 @@ function openNav() {
 }
 function changeStyles() {
   $('i').hide();
-  $( "nav" ).height( '100%' ).css("flex-direction", "column");
+  $( "nav" ).height( '100%' ).css({"flex-direction": "column", "position": "fixed", "overflow": "hidden"});
   $('.logo').width( '100%' ).css({"align-items": "flex-start", "justify-content": "center", "padding-top": "50px"});
   $('.links').css({"flex-direction": "column", "justify-content": "center" });
   $('.linksmobile').css({"display": "flex", "justify-content":"center", "align": "center", "padding-bottom": "50px"});
