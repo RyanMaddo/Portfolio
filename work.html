@@ -54,9 +54,9 @@
        }
        .grooupemail
        {
-        
+
        }
-       .infoleft 
+       .infoleft
        {
         width: 100%;
        }
@@ -66,8 +66,8 @@
        }
        .leftbutton
        {
-        width:150px;   
-        font-size: 35px;    
+        width:150px;
+        font-size: 35px;
       }
       .rightbutton
       {
@@ -133,38 +133,7 @@
       <i class="fas fa-angle-right"></i>
     </div>
     </div>
-    <div class="grooupemailproject">
-      <h1>Grooup Html Email</h1>
-    <p>This Project was undertaken as part of the Professional Portfolio Module at Edge Hill University</p>
-  <h2>Planning</h2>
-  <p>At the start of this project I firstly looked at what current HTML Emails look like, to do this I used a website called <a href="https://reallygoodemails.com/">ReallyGoodEmails</a>, I also looked within my own Email Mailbox to see
-    how the companies that I am interested in format their emails.</p>
-    <p> From this I found that emails tend to follow the design of Logo at the top and images and text followed below, this can be seen by the example below</p>
-    <div id="email-layout-scroll">
-    <img src="images/grooup email/email-layout.png" style="margin-right">
-    </div>
-    <p>Once having an idea of what current HTML Emails look like I came up with some low fidelity prototypes</p>
-    <img src="images/grooup email/lowfidelity.jpg" style="width: 600px; height: 600px; transform: rotate(90deg);">
-      <p>From the prototypes listed above I chose this design asI felt that this style is very similar to the Grooup website. Once chosen I then created the following high fidelity prototype to visualise what
-        the email would actually look like with the appropiate content added.</p>
-      <p>After creating the high fidelity prototype I then had to start to think how to code html emails and as I had never created an HTML email before, I did some research and found that html tables are
-      the best way to get the layout of HTML Emails to work within outlook, so it was important that I used tables as the main aim of the project was to get the email to work on all email clients.</p>
-
-      <h1>Finished Product</h1>
-      <p>The finished project can be viewed below or by clicking this link <a href="grooup-email.html">View Email</a>
-
-          <object id="finished-email-scrollable" type="text/html" data="grooup-email.html" style="margin-left: 25%; width:600px;">
-          </object>
-
-          <h1>Testing</h1>
-          <p>After the email was finished it was tested using <a href="https://www.emailonacid.com/">EmailOnAcid</a> this
-            shown whether the email would work on mutliple clients, the results shown that the email would work all 88 clients tested.
-            The clients included the mail apps on both ios and android and gmail etc.</p>
-            <h2>Test example on Iphone 6 Gmail</h2>
-            <img src="images/grooup email/images/iphone6test.png">
-            <h2>Other test examples</h2>
-            <img src="images/grooup email/images/emailtest.png">
-    </div>
+    
   <div class="sdachurch">
      <div class="leftbutton" onclick="sdaLeftButton()">
           <i class="fas fa-angle-left"></i>
@@ -206,34 +175,36 @@
 </div>
 <footer>
   <div class="ftrleft">
-    <a href="files/Ryan Maddock - CV.docx" Download>
-      <p>Download CV</p>
+    <a style="background-color: #c1272d; border: 2px solid #fcc006; width:200px;" href="files/Ryan Maddock - CV.docx" Download>
+      <p style="color:white; text-align:center;">Download my CV</p>
     </a>
   </div>
   <div class="ftrright">
     <a href="https://www.linkedin.com/in/ryanmaddock96/"><i class="fab fa-linkedin"></i></a>
-    <a href="github.com/ryanmaddo"><i class="fab fa-github-square"></i></a>
+    <a href="https://github.com/ryanmaddo"><i class="fab fa-github-square"></i></a>
     <a href="mailto:ryanmaddock16@hotmail.co.uk"><i class="fas fa-envelope"></i></a>
   </div>
 </footer>
 </body>
 <script>
-  function openNav() {
-      var x = document.getElementById("mobileNav");
-      if (x.className === "links") {
-          x.className += " responsive";
+function openNav() {
+    var x = document.getElementById("mobileNav");
+    if (x.className === "links") {
+        x.className += " responsive";
 
-      } else {
-          x.className = "links";
-      }
-  }
-  function changeStyles() {
-    $('i').hide();
-    $( "nav" ).height( '100%' ).css("flex-direction", "column");
-    $('.logo').width( '100%' ).css({"align-items": "flex-start", "justify-content": "center", "padding-top": "50px"});
-    $('.links').css({"flex-direction": "column", "justify-content": "center" });
-    $('.linksmobile').css({"display": "flex", "justify-content":"center", "align": "center", "padding-bottom": "50px"});
-  }
+    } else {
+        x.className = "links";
+    }
+}
+function changeStyles() {
+  $('i').hide();
+  $( "nav" ).height( '100%' ).css({"flex-direction": "column", "position": "fixed", "overflow": "hidden"});
+  $('.logo').width( '100%' ).css({"align-items": "flex-start", "justify-content": "center", "padding-top": "50px", "padding-bottom": "100px"  });
+  $('.logo img').height('125px').width('125px');
+  $('.links').css({"flex-direction": "column", "justify-content": "center" });
+  $('.linksmobile').css({"display": "flex", "justify-content":"center", "align": "center", "padding-bottom": "50px"});
+  $('html, body').css ({"margin": "0", "height": "100%", "overflow": "hidden", "position": "fixed"});
+}
     $( document ).ready()
   window.onload = function() {
     $('.sdachurch').hide();
