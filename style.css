@@ -186,6 +186,33 @@ margin: 20px;
   height:100%;
   width:100%;
 }
+.grooupheader
+{
+  width:100%;
+  background-color: #55b752;
+}
+.grooupheader h1
+{
+  color:white;
+}
+.sdachurchheader
+{
+  width:100%;
+  background-color:#135351;
+}
+.sdachurchheader h1
+{
+  color:white;
+}
+.thiswebsiteheader
+{
+  width:100%;
+  background-color:#c1272d;
+}
+.thiswebsiteheader h1
+{
+  color:white;
+}
 
 h1
 {
