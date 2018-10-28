@@ -31,7 +31,7 @@
       }
       nav
       {
-        height:125px;
+        height:100px;
         width:100%;
         position: static;
       }
@@ -67,12 +67,13 @@
       }
       .logo
       {
-        flex-grow: 3;
+        flex-grow: 5;
         justify-content: center;
       }
       .logo img
       {
-        height:80px;
+        height:70px;
+        width:100px;
       }
       .links
       {
@@ -169,9 +170,10 @@ function changeStyles() {
   $('i').hide();
   $( "nav" ).height( '100%' ).css({"flex-direction": "column", "position": "fixed", "overflow": "hidden"});
   $('.logo').width( '100%' ).css({"align-items": "flex-start", "justify-content": "center", "padding-top": "50px"});
+  $('.logo img').height('125px').width('125px');
   $('.links').css({"flex-direction": "column", "justify-content": "center" });
   $('.linksmobile').css({"display": "flex", "justify-content":"center", "align": "center", "padding-bottom": "50px"});
-  $('html, body').css ({"margin": "0", "height": "100%", "overflow": "hidden"});
+  $('html, body').css ({"margin": "0", "height": "100%", "overflow": "hidden", "position": "fixed"});
 }
 
 
