@@ -27,14 +27,13 @@
       }
       .container
       {
-        width:95%;
+        width:100%;
       }
       nav
       {
         height:125px;
         width:100%;
         position: static;
-
       }
       .hometext
       {
@@ -129,12 +128,11 @@
   <div class="homecontent">
     <div class="container">
       <div class="homecontainer">
-
       <div class="homeimage">
         <img src="files/me.png">
       </div>
       <div class="hometext">
-        <h1>Hello!</h1>
+        <h1>Hello I'm Ryan Maddock!</h1>
         <p>I'm a graduate in web design and development.</p>
         <p>Looking at becoming a front end developer.</p>
         <a href="work.html"><button>View work</button></a>
@@ -173,6 +171,7 @@ function changeStyles() {
   $('.logo').width( '100%' ).css({"align-items": "flex-start", "justify-content": "center", "padding-top": "50px"});
   $('.links').css({"flex-direction": "column", "justify-content": "center" });
   $('.linksmobile').css({"display": "flex", "justify-content":"center", "align": "center", "padding-bottom": "50px"});
+  $('html, body').css ({"margin": "0", "height": "100%", "overflow": "hidden"});
 }
 
 
