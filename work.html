@@ -11,13 +11,19 @@
     {
       nav
       {
+        height:90px;
         width:100%;
-
+        position: static;
       }
       .logo
       {
-        flex-grow: 3;
+        flex-grow: 5;
         justify-content: center;
+      }
+      .logo img
+      {
+        height:70px;
+        width:70px;
       }
       .links
       {
@@ -32,7 +38,7 @@
        .links a.icon
        {
          display: block;
-         font-size: 50pt;
+         font-size: 35pt;
          padding-right: 50px;
 
        }
@@ -48,32 +54,39 @@
          display: block;
          text-align: left;
        }
+       .workcontent
+       {
+         margin-top:20px;
+         margin-bottom: 30px;
+         width:100%;
+         height: auto;
+       }
        .mobileWrapper
        {
         flex-direction: column;
        }
-       .grooupemail
+       .workcontainer
        {
+         flex-direction: column;
+         padding-bottom: 50px;
 
        }
-       .infoleft
+       .grooup
        {
-        width: 100%;
+         margin-right: 0;
+         margin: auto;
+         margin-bottom: 50px;
        }
-       .infoleft p
+       .sdachurch
        {
-        font-size: 12pt;
+         margin-right: 0;
+         margin: auto;
+         margin-bottom: 50px;
        }
-       .leftbutton
+       .thiswebsite
        {
-        width:150px;
-        font-size: 35px;
-      }
-      .rightbutton
-      {
-        width: 150px;
-        font-size: 35px;
-      }
+         margin:auto;
+       }
       }
 
 
@@ -102,76 +115,18 @@
   <div class="workcontent">
     <div class="container">
       <h1>MY WORK</h1>
-      <div class="circles">
-        <svg height="100" width="60">
-            <circle id="leftcircle" cx="30" cy="30" r="20" stroke="#fcc006" stroke-width="3" fill="none">
-          </circle>
-        </svg>
-        <svg height="100" width="60">
-          <circle id="centercircle" cx="30" cy="30" r="20" stroke="#fcc006" stroke-width="3" fill="#c1272d" />
-        </svg>
-        <svg height="100" width="60">
-          <circle id="rightcircle" cx="30" cy="30" r="20" stroke="#fcc006" stroke-width="3" fill="none" />
-        </svg>
-      </div>
-    <div class="sliderwrapper">
-      <div class="grooupemail">
-        <div class="leftbutton" onclick="grooupLeftButton()">
-          <i class="fas fa-angle-left"></i>
-        </div>
-        <div class="mobileWrapper" style="display: flex;">
-        <div class="infoleft">
-          <h2>Grooup HTML Email</h2>
-          <p>Type: University Project</p>
-          <p>As Part of my professional portfolio module at university I was given a task to create a HTML email for the company Grooup.</p>
-        </div>
-      <div class="inforight">
+      <div class="workcontainer">
+      <div class="grooup">
         <img src="files/grooup.png">
       </div>
-    </div>
-       <div class="rightbutton" onclick="grooupRightButton()">
-      <i class="fas fa-angle-right"></i>
-    </div>
-    </div>
-    
-  <div class="sdachurch">
-     <div class="leftbutton" onclick="sdaLeftButton()">
-          <i class="fas fa-angle-left"></i>
-        </div>
-    <div class="infoleft">
-      <h2>Southport Seventh-Day Adventist Website creation</h2>
-      <p>Type: FreeLance</p>
-      <p>SDA church Website creation</p>
-    </div>
-  <div class="inforight">
-    <img src="files/grooup.png">
-  </div>
-   <div class="rightbutton" onclick="sdaRightButton()" >
-      <i class="fas fa-angle-right"></i>
-    </div>
-    </div>
-    <div class="thiswebsite">
-       <div class="leftbutton" onclick="thisWebsiteLeftButton()">
-          <i class="fas fa-angle-left"></i>
-        </div>
-      <div class="infoleft">
-        <h2>This Portfolio Site</h2>
-        <p>Type: Personal</p>
-        <p>Creating this website!</p>
+      <div class="sdachurch">
+        <img src="files/church.png">
       </div>
-    <div class="inforight">
-      <img src="files/grooup.png">
-    </div>
-       <div class="rightbutton" onclick="thisWebsiteRightButton()">
-      <i class="fas fa-angle-right"></i>
-    </div>
-    <div class="thiswebsiteproject">
-      THIS Website
+      <div class="thiswebsite">
+        <img src="files/portfolio.png">
+      </div>
     </div>
   </div>
-</div>
-  <button class="projectinfo" style="margin-top:20px; margin-bottom:20px;">View Project</button>
-</div>
 </div>
 <footer>
   <div class="ftrleft">
@@ -205,94 +160,6 @@ function changeStyles() {
   $('.linksmobile').css({"display": "flex", "justify-content":"center", "align": "center", "padding-bottom": "50px"});
   $('html, body').css ({"margin": "0", "height": "100%", "overflow": "hidden", "position": "fixed"});
 }
-    $( document ).ready()
-  window.onload = function() {
-    $('.sdachurch').hide();
-    $('.thiswebsite').hide();
-    $('.grooupemailproject').hide();
-    $('.thiswebsiteproject').hide();
-  }
-    function grooupLeftButton()
-    {
-      $('.grooupemail').hide();
-      $('.sdachurch').show();
-      document.getElementById("leftcircle").setAttribute("fill", "#c1272d");
-      document.getElementById("centercircle").setAttribute("fill", "none");
-      document.getElementById("rightcircle").setAttribute("fill", "none");
-    }
-    function grooupRightButton()
-    {
-      $('.grooupemail').hide();
-      $('.thiswebsite').show();
-       document.getElementById("leftcircle").setAttribute("fill", "none");
-      document.getElementById("centercircle").setAttribute("fill", "none");
-      document.getElementById("rightcircle").setAttribute("fill", "#c1272d");
-    }
-    function sdaLeftButton()
-    {
-      $('.sdachurch').hide();
-      $('.thiswebsite').show();
-      document.getElementById("leftcircle").setAttribute("fill", "none");
-      document.getElementById("centercircle").setAttribute("fill", "none");
-      document.getElementById("rightcircle").setAttribute("fill", "#c1272d");
-    }
-    function sdaRightButton()
-    {
-      $('.sdachurch').hide();
-      $('.grooupemail').show();
-      document.getElementById("leftcircle").setAttribute("fill", "none");
-      document.getElementById("centercircle").setAttribute("fill", "#c1272d");
-      document.getElementById("rightcircle").setAttribute("fill", "none");
-    }
-    function thisWebsiteLeftButton()
-    {
-      $('.thiswebsite').hide();
-      $('.grooupemail').show();
-      document.getElementById("leftcircle").setAttribute("fill", "none");
-      document.getElementById("centercircle").setAttribute("fill", "#c1272d");
-      document.getElementById("rightcircle").setAttribute("fill", "none");
-    }
-    function thisWebsiteRightButton()
-    {
-      $('.thiswebsite').hide();
-      $('.sdachurch').show();
-      document.getElementById("leftcircle").setAttribute("fill", "#c1272d");
-      document.getElementById("centercircle").setAttribute("fill", "none");
-      document.getElementById("rightcircle").setAttribute("fill", "none");
-    }
-
-
-
-
-
-    if ($('.grooupemail').not(':hidden'))
-    {
-      $('.projectinfo').on("click", function()
-      {
-        $('.grooupemailproject').show();
-        if ($('.grooupemailproject').not(':hidden'))
-        {
-          $('.projectinfo').on("click", function()
-        {
-          $('.grooupemailproject').hide();
-        });
-        }
-      });
-    }
-
-
-
-
-
-
-
-    if ($('.thiswebsite').not(':hidden'))
-    {
-      $('.projectinfo').on("click", function()
-      {
-        $('.thiswebsiteproject').show();
-      });
-    }
 
 </script>
 </html>
