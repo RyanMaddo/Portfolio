@@ -11,6 +11,7 @@
     .aboutcontent
     {
       height:auto;
+      margin-top: 0px;
     }
     .container
     {
@@ -22,12 +23,19 @@
     }
     nav
     {
-      width: 100%;
+      height:90px;
+      width:100%;
+      position: static;
     }
     .logo
     {
-      flex-grow: 3;
+      flex-grow: 5;
       justify-content: center;
+    }
+    .logo img
+    {
+      height:70px;
+      width:70px;
     }
     .links
     {
@@ -42,7 +50,7 @@
      .links a.icon
      {
        display: block;
-       font-size: 50pt;
+       font-size: 35pt;
        padding-right: 50px;
 
      }
@@ -81,33 +89,34 @@
     </nav>
   </div>
   <div class="aboutcontent">
-    <div class="container">
-  <h1 style="padding-top:50px;">ABOUT ME</h1>
+  <div class="container">
+    <h1>ABOUT ME</h1>
+  <div class="aboutcontainer">
   <p>Hello my name is Ryan Maddock! I'm a graduate web design and development student
   based near Warrington, currently looking for a junior/graduate front end development
   role.
   </p>
   <h2 style="text-align:center; padding-bottom:30px;">My Skills</h2>
-  <table style="width:600px; height:auto; text-align: center; margin:auto;">
+  <table style="max-width:600px; height:auto; text-align: center; margin:auto;">
     <tr>
       <td style="width:100px;">HTML</td>
       <td style="width:400px; background-color:#c1272d; border: 2px solid #fcc006;"></td>
     </tr>
   </table>
-    <table style="width:600px; height:auto; text-align: center; margin: auto;">
+    <table style="max-width:600px; height:auto; text-align: center; margin: auto;">
   <tr>
       <td style="width:100px;">CSS</td>
       <td style="width:400px; background-color:#c1272d; border: 2px solid #fcc006;"></td>
     </tr>
   </table>
-  <table style="width:600px; height:auto; text-align: center; margin: auto; ">
+  <table style="max-width:600px; height:auto; text-align: center; margin: auto; ">
     <tr>
       <td style="width:100px;">JavaScript</td>
       <td style="width:100px; background-color:#c1272d; border: 2px solid #fcc006;"></td>
       <td style="width:300px;"></td>
     </tr>
   </table>
-  <table style="width:600px; height:auto; text-align: center; margin: auto; ">
+  <table style="max-width:600px; height:auto; text-align: center; margin: auto; ">
   <tr>
       <td style="width:100px;">PHP</td>
       <td style="width:50px; background-color:#c1272d; border: 2px solid #fcc006;"></td>
@@ -115,13 +124,13 @@
     </tr>
 
   </table>
-  <table style="width:600px; height:auto; text-align: center; margin: auto; ">
+  <table style="max-width:600px; height:auto; text-align: center; margin: auto; ">
     <tr>
       <td style="width:100px;">Microsoft Office</td>
       <td style="width:400px; background-color:#c1272d; border: 2px solid #fcc006;"></td>
     </tr>
   </table>
-  <table style="width:600px; height:auto; text-align: center; margin: auto; ">
+  <table style="max-width:600px; height:auto; text-align: center; margin: auto; ">
   <tr>
       <td style="width:100px;">Photoshop</td>
       <td style="width:400px; background-color:#c1272d; border: 2px solid #fcc006;"></td>
@@ -154,10 +163,12 @@ function openNav() {
 }
 function changeStyles() {
   $('i').hide();
-  $( "nav" ).height( '100%' ).css("flex-direction", "column");
-  $('.logo').width( '100%' ).css({"align-items": "flex-start", "justify-content": "center", "padding-top": "50px"});
+  $( "nav" ).height( '100%' ).css({"flex-direction": "column", "position": "fixed", "overflow": "hidden"});
+  $('.logo').width( '100%' ).css({"align-items": "flex-start", "justify-content": "center", "padding-top": "50px", "padding-bottom": "100px"  });
+  $('.logo img').height('125px').width('125px');
   $('.links').css({"flex-direction": "column", "justify-content": "center" });
   $('.linksmobile').css({"display": "flex", "justify-content":"center", "align": "center", "padding-bottom": "50px"});
+  $('html, body').css ({"margin": "0", "height": "100%", "overflow": "hidden", "position": "fixed"});
 }
 </script>
 
