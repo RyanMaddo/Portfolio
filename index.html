@@ -57,7 +57,7 @@
       }
       .homecontent
       {
-        margin-top: 0px;
+        padding-top: 25px;
         height:auto;
       }
       footer
@@ -106,12 +106,43 @@
          display: block;
          text-align: left;
        }
+       .skillscontainer1
+       {
+
+         flex-direction: column;
+         padding-top: 10px;
+       }
+       .skillscontainer2
+       {
+         padding-top: 0;
+         flex-direction: column;
+       }
+       .html
+       {
+         padding-right: 0;
+       }
+       .javascript
+       {
+         padding-right: 0;
+       }
+       #progress
+       {
+        width: 90%;
+       }
+       .contact
+       {
+         height: 350px;
+       }
+       .skills hr
+       {
+         width: 100%;
+       }
 }
   </style>
 </head>
 <body>
   <div class="header">
-    <nav>
+    <nav style="border: none;">
       <div class="logo">
         <a class="logoimg" href="index.html"><img src="files/logo.png"</a>
       </div>
@@ -129,24 +160,72 @@
     </nav>
   </div>
   <div class="homecontent">
-    <div class="container">
-      <div class="homecontainer">
+      <div class="homeheader">
       <div class="homeimage">
         <img src="files/me.png">
       </div>
       <div class="hometext">
-        <h1>Hello I'm Ryan Maddock!</h1>
+        <h1>Hello I'm <strong class="colortext">R</strong>yan <strong class="colortext">M</strong>addock!</h1>
         <p>I'm a graduate in web design and development.</p>
         <p>Looking at becoming a front end developer.</p>
         <a href="work.html"><button>View work</button></a>
       </div>
     </div>
+    <div class="skills">
+      <h1>My Main Skills</h1>
+      <hr style="width: 1000px;">
+    <div class="skillscontainer1">
+      <div class="html">
+        <h2>HTML</h2>
+      <div id="progress">
+        <div id="htmlprogress">
+        </div>
+      </div>
+      </div>
+      <div class="css">
+        <h2>CSS</h2>
+      <div id="progress">
+        <div id="cssprogress">
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="skillscontainer2">
+    <div class="javascript">
+      <h2>Javascript</h2>
+      <div id="progress">
+        <div id="javascriptprogress">
+        </div>
       </div>
   </div>
-  <footer>
+  <div class="php">
+    <h2>PHP</h2>
+    <div id="progress">
+      <div id="phpprogress">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="contactcontainer">
+  <div class="contact">
+    <h1>Hire me?</h1>
+    <p>
+      I am currently looking for a junior Front End Developer role to gain more skills
+      and experience to be able to grow as a <strong class="colortext">Developer</strong>.
+    </p>
+    <a href="contact.html">
+      <button style="height: 50px; width: 200px; border: 1px solid black; background-color: white;">Contact me</button>
+    </a>
+      </div>
+</div>
+</div>
+</div>
+  <footer style="border: none;">
     <div class="ftrleft">
-      <a style="background-color: #c1272d; border: 2px solid #fcc006; width:200px;" href="files/Ryan Maddock - CV.docx" Download>
-        <p style="color:white; text-align:center;">Download my CV</p>
+      <a href="files/Ryan Maddock - CV.docx">
+        <button>
+          <p style="color:white; text-align:center;">Download my CV</p>
+      </button>
       </a>
     </div>
     <div class="ftrright">
