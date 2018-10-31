@@ -382,6 +382,10 @@ padding-right: 50px;
   justify-content: center;
   align-items: center;
 }
+.projecttypeleft h2
+{
+  padding-top: 150px;
+}
 .projecttypeleft p
 {
   font-size: 16pt;
