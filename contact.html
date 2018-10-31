@@ -120,13 +120,13 @@
   <div class="container">
     <h1>Contact Me</h1>
   <div class="aboutcontainer">
-    <form method="post" name="myemailform" action="contact.php">
-
-Enter Name: <input type="text" name="name">
-Enter Email Address:    <input type="text" name="email">
-Enter Message:  <textarea name="message"></textarea>
-<input type="submit" value="Send Form">
-</form>
+    <form class="contact-form" action="contact.php" method="post">
+      <input type="text" name="name" placeholder="Full Name">
+      <input type="text" name="mail" placeholder="Your Email">
+      <input type="text" name="subject" placeholder="Subject">
+      <textarea name="message" placeholder="message"> </textarea>
+      <button type="submit" name="submit">SUBMIT</button>
+    </form>
 
 
 
