@@ -23,6 +23,7 @@
     }
     nav
     {
+      z-index: 99;
       height:90px;
       width:100%;
       position: static;
@@ -66,6 +67,26 @@
        display: block;
        text-align: left;
      }
+     .abouttop
+     {
+       flex-direction: column;
+       justify-content: center;
+     }
+     .abouttop h1,p
+     {
+       margin: auto;
+     }
+     .abouttop img
+     {
+       overflow: hidden;
+     }
+     .aboutmiddle
+     {
+       flex-grow: 1;
+       flex-direction: column-reverse;
+       justify-content: center;
+       align-items: center;
+     }
      footer
      {
        height:100px;
@@ -99,50 +120,27 @@
   <div class="container">
     <h1>ABOUT ME</h1>
   <div class="aboutcontainer">
-  <p>Hello my name is Ryan Maddock! I'm a graduate web design and development student
-  based near Warrington, currently looking for a junior/graduate front end development
-  role.
+    <div class="abouttop">
+    <div class="aboutleft">
+      <h1 style="border-bottom:0;"> Who Am I?</h1>
+  <p>
+    I am 21 year old Web Design and Development Graduate based near Warrington UK, with a passion for making clean <strong class="colortext"> responsive</strong> websites.
   </p>
-  <h2 style="text-align:center; padding-bottom:30px;">My Skills</h2>
-  <table style="max-width:600px; height:auto; text-align: center; margin:auto;">
-    <tr>
-      <td style="width:100px;">HTML</td>
-      <td style="width:400px; background-color:#c1272d; border: 2px solid #fcc006;"></td>
-    </tr>
-  </table>
-    <table style="max-width:600px; height:auto; text-align: center; margin: auto;">
-  <tr>
-      <td style="width:100px;">CSS</td>
-      <td style="width:400px; background-color:#c1272d; border: 2px solid #fcc006;"></td>
-    </tr>
-  </table>
-  <table style="max-width:600px; height:auto; text-align: center; margin: auto; ">
-    <tr>
-      <td style="width:100px;">JavaScript</td>
-      <td style="width:100px; background-color:#c1272d; border: 2px solid #fcc006;"></td>
-      <td style="width:300px;"></td>
-    </tr>
-  </table>
-  <table style="max-width:600px; height:auto; text-align: center; margin: auto; ">
-  <tr>
-      <td style="width:100px;">PHP</td>
-      <td style="width:50px; background-color:#c1272d; border: 2px solid #fcc006;"></td>
-        <td style="width:350px;"></td>
-    </tr>
-
-  </table>
-  <table style="max-width:600px; height:auto; text-align: center; margin: auto; ">
-    <tr>
-      <td style="width:100px;">Microsoft Office</td>
-      <td style="width:400px; background-color:#c1272d; border: 2px solid #fcc006;"></td>
-    </tr>
-  </table>
-  <table style="max-width:600px; height:auto; text-align: center; margin: auto; ">
-  <tr>
-      <td style="width:100px;">Photoshop</td>
-      <td style="width:400px; background-color:#c1272d; border: 2px solid #fcc006;"></td>
-    </tr>
-  </table>
+</div>
+<div class="aboutright">
+  <img src="files/codeimage.png">
+</div>
+</div>
+<div class="aboutmiddle">
+<div class="aboutleft">
+<img src="files/wireframe.jpg">
+</div>
+<div class="aboutright">
+  <h1 style="border-bottom:0;">Why Should You Hire Me?</h1>
+  <p>I am willing to <strong class="colortext">learn new skills</strong> and do whatever it takes to make sure projects meet <strong class="colortext">deadlines</strong>.</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <footer>

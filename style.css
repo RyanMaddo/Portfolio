@@ -18,8 +18,6 @@ nav
   display: flex;
   font-size: 40px;
   height:120px;
-  position: fixed;
-  overflow: none;
   top: 0;
   left: 0;
 }
@@ -89,7 +87,7 @@ margin: 20px;
 /* Index.html Styles */
 .homecontent
 {
-  padding-top: 150px;
+  padding-top: 50px;
   width:100%;
   height:auto;
   background-color: #c1272d ;
@@ -259,7 +257,7 @@ padding-right: 50px;
 /* about.html Styles */
 .aboutcontent
 {
-  margin-top:160px;
+  margin-top:50px;
   width:100%;
   height: 600px;
 }
@@ -271,17 +269,68 @@ padding-right: 50px;
 }
 .aboutcontent
 {
-  margin-top:160px;
+  margin-top:50px;
   width:100%;
-  min-height: 100%;
+  height: auto;
   text-align: center;
 }
 .aboutcontainer
 {
   padding-bottom: 100px;
   padding-top:50px;
+  display: flex;
+  flex-direction: column;
+}
+.abouttop
+{
+  display: flex;
+  flex-direction: row;
+
+}
+.aboutmiddle
+{
+  display: flex;
+  flex-direction: row;
+}
+.aboutleft
+{
+  flex-grow: 1;
+  height: 400px;
+}
+.aboutright
+{
+  flex-grow: 1;
+  height: 400px;
+}
+.aboutleft h1
+{
+  font-size: 20pt;
+}
+.aboutleft p
+{
+  font-size: 16pt;
+}
+.aboutleft img
+{
+  height: 100%;
+  width:500px;
+  filter: blur(1px);
+}
+.aboutright img
+{
+  height: 100%;
+  width:500px;
+  filter: blur(1px);
 }
 
+.aboutright h1
+{
+  font-size: 20pt;
+}
+.aboutright p
+{
+  font-size: 16pt;
+}
 
 
 
@@ -290,7 +339,7 @@ padding-right: 50px;
 /* work.html Styles */
 .workcontent
 {
-  margin-top:160px;
+  margin-top:50px;
   width:100%;
   min-height: 90%;
   text-align: center;
@@ -317,6 +366,27 @@ padding-right: 50px;
 }
 
 /* Project Styles */
+.projecttype
+{
+  display: flex;
+
+}
+.projecttyperight img
+{
+  height: 500px;
+  width: 400px;
+}
+.projecttypeleft
+{
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+.projecttypeleft p
+{
+  font-size: 16pt;
+
+}
 .navigationbuttons
 {
   width:100%;
@@ -360,14 +430,22 @@ padding-right: 50px;
 /* Grooup HTML Email */
 .grooup
 {
-  height:300px;
+  height:400px;
   width: 300px;
   margin-right: 50px;
-  border: 2px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.grooup a
+{
+  text-decoration: none;
+}
+.groouptext
+{
+  height: auto;
 }
 .grooup img
 {
-  height:100%;
+  height:300px;
   width:100%;
 }
 .grooupheader
@@ -386,14 +464,18 @@ padding-right: 50px;
 /* Southport Seventh Day Adventist Website */
 .sdachurch
 {
-  height:300px;
+  height:400px;
   width: 300px;
   margin-right: 50px;
-  border: 2px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.sdachurch a
+{
+  text-decoration: none;
 }
 .sdachurch img
 {
-  height:100%;
+  height:300px;
   width:100%;
 }
 .sdachurchheader
@@ -412,13 +494,16 @@ padding-right: 50px;
 /* This Portfolio Site */
 .thiswebsite
 {
-  height:300px;
+  height:400px;
   width: 300px;
-  border: 2px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.thiswebsite a {
+  text-decoration: none;
 }
 .thiswebsite img
 {
-  height:100%;
+  height:300px;
   width:100%;
 }
 
